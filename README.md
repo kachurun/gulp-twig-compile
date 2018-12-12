@@ -1,40 +1,18 @@
-gulp-twig-compile
+gulp-twig-build
 =================
-
-[![Build Status](https://travis-ci.org/Nanigans/gulp-twig-compile.png?branch=master)](https://travis-ci.org/Nanigans/gulp-twig-compile)
-[![dependencies](https://david-dm.org/Nanigans/gulp-twig-compile.png)](https://david-dm.org/Nanigans/gulp-twig-compile)
-
-
-[![NPM info](https://nodei.co/npm/gulp-twig-compile.png?downloads=true)](https://nodei.co/npm/gulp-twig-compile.png?downloads=true)
-
-## Information
-
-<table>
-<tr> 
-<td>Package</td><td>gulp-twig-compile</td>
-</tr>
-<tr>
-<td>Description</td>
-<td>Compiles Twig Templates to Javascript using [Twig.js](https://github.com/justjohn/twig.js)</td>
-</tr>
-<tr>
-<td>Node Version</td>
-<td>>= 0.9</td>
-</tr>
-</table>
 
 ## Installation
 
 ```sh
-npm install --save gulp-twig-compile
+npm install --save gulp-twig-build
 ```
 
 ## Usage
 
 ```javascript
-var twig_compile = require('gulp-twig-compile');
+const twig_compile = require('gulp-twig-build');
 
-gulp.task('twig', function() {
+gulp.task('twig', () => {
   gulp.src('./src/**/*.twig')
     .pipe(twig_compile())
     .pipe(gulp.dest('./dest/'))
@@ -55,7 +33,7 @@ The options object supports the `module` and `twig` options for the [Twig compil
    Used with module. The location relative to the output directory of twig.js. (used for module dependency resolution).
 
 ```javascript
-var twig_compile = require('gulp-twig-compile');
+const twig_compile = require('gulp-twig-build');
 
 gulp.task('twig', function() {
   gulp.src('./src/**/*.twig')
